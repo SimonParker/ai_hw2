@@ -10,7 +10,7 @@ def dx(x):
 def dy(y):
   return 2*y - 12
 
-def run_tests(eta, f, iters):
+def gradient_descent(eta, f, iters):
   x = x_init = random.randint(-10, 10)
   y = y_init = random.randint(-10, 10)
   for i in range(iters):
@@ -22,4 +22,4 @@ def run_tests(eta, f, iters):
 
 max_iters = 500
 for step in [0.1, 0.01, 0.001]:
-  run_tests(step, func, max_iters)
+  gradient_descent(step, func, max_iters)
